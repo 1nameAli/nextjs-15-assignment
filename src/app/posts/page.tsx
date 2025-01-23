@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // TypeScript type definition for a Post
 type Post = {
     id: number;
@@ -20,12 +22,12 @@ type Post = {
           {posts.map((post) => (
             <li key={post.id} className="border p-4 rounded-md shadow-md">
               {/* Dynamic link to the post details */}
-              <a
+              <Link
                 href={`/posts/${post.id}`}
                 className="text-lg font-semibold text-blue-600 hover:underline"
               >
                 {post.title}
-              </a>
+              </Link>
               <p className="text-gray-600 mt-2">{post.body}</p>
             </li>
           ))}

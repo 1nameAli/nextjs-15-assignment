@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 // Type definition for a Post
@@ -38,9 +39,9 @@ export default async function Post({ params }: PostPageProps) {
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <p className="text-gray-700 mb-6">{post.body}</p>
-      <a href="/posts" className="text-blue-600 hover:underline">
+      <Link href="/posts" className="text-blue-600 hover:underline">
         Back to all posts
-      </a>
+      </Link>
     </div>
   );
 }
